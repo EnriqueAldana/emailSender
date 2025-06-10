@@ -1,7 +1,7 @@
 package com.email.sender.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,9 +11,8 @@ import com.email.sender.entity.EmailMessage;
 import com.email.sender.service.EmailService;
 
 import jakarta.mail.MessagingException;
-import jakarta.mail.internet.InternetAddress;
-import jakarta.mail.internet.MimeMessage;
 
+ 
 
 @RestController
 public class EmailSender {
@@ -32,7 +31,6 @@ public class EmailSender {
 		 try {
 			emailService.sendHtmlEmail(emailMessage.getFrom(), emailMessage.getTo(), emailMessage.getSubject(), emailMessage.getBody());
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			response = "Ha habido un error al enviar el correo.";
 		}
