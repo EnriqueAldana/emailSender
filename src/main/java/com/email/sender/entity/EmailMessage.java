@@ -1,10 +1,18 @@
 package com.email.sender.entity;
 
+import org.springframework.lang.NonNull;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class EmailMessage {
 	
-	private String from;
+
 	private String to;
+
 	private String subject;
+
 	private String body;
 	
 	public EmailMessage() {
@@ -19,15 +27,11 @@ public class EmailMessage {
 		this.to = to;
 		this.subject = subject;
 		this.body = body;
-		this.from= from;
+	
 	}
 	
-	public String getFrom() {
-		return from;
-	}
-	public void setFrom(String from) {
-		this.from = from;
-	}
+
+
 	public String getTo() {
 		return to;
 	}

@@ -1,0 +1,12 @@
+Datos de configuracion.
+
+
+Bitacora.
+
+13 Jun 2025
+
+1.- Implementar minimo nivel de manejo de errores. 
+2.- Implementar minimo nivel de seguridad, estrategia de palabra clave.
+
+
+
